@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="840.0" maxWidth="1400.0" minHeight="840.0" minWidth="1400.0" prefHeight="840.0" prefWidth="1400.0" style="-fx-background-color: A0A0A0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.course_java_lab_1.GameController">
+   <children>
+      <AnchorPane layoutX="1108.0" prefHeight="840.0" prefWidth="292.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3;">
+         <children>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="23.0" prefHeight="35.0" prefWidth="271.0" text="Счёт игрока:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="userScore" alignment="CENTER" layoutX="61.0" layoutY="76.0" prefHeight="19.0" prefWidth="162.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label fx:id="userShoots" alignment="CENTER" layoutX="61.0" layoutY="161.0" prefHeight="19.0" prefWidth="162.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="118.0" prefHeight="35.0" prefWidth="271.0" text="Выстрелов:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="662.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="178.0" prefWidth="1108.0" style="-fx-background-color: F0F0F0; -fx-border-color: black; -fx-border-width: 3;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Button fx:id="startButton" layoutX="39.0" layoutY="35.0" mnemonicParsing="false" onAction="#startGame" prefHeight="93.0" prefWidth="170.0" style="-fx-background-color: green;" text="Начало игры" textAlignment="CENTER" textFill="#fff8f8" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="stopButton" layoutX="246.0" layoutY="35.0" mnemonicParsing="false" onAction="#stopGame" prefHeight="93.0" prefWidth="207.0" style="-fx-background-color: red;" text="Остановить игру" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="shootButton" layoutX="495.0" layoutY="35.0" mnemonicParsing="false" onAction="#makeShoot" prefHeight="93.0" prefWidth="170.0" style="-fx-background-color: black;" text="Выстрел" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="721.0" layoutY="35.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="137.0" style="-fx-background-color: orange;" text="Пауза" textFill="#fff4f4">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="900.0" layoutY="35.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="187.0" style="-fx-background-color: blue;" text="Возобновить" textAlignment="CENTER" textFill="#fffefe" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="663.0" prefWidth="200.0" style="-fx-background-color: yellow; -fx-border-color: black;">
+         <children>
+            <Arc fill="DODGERBLUE" layoutX="111.0" layoutY="347.0" length="270.0" radiusX="80.0" radiusY="80.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+            <Circle fill="#f4f4f4" layoutX="100.0" layoutY="300.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle layoutX="100.0" layoutY="300.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+      <Line endX="443.3333740234375" endY="383.0" layoutX="564.0" layoutY="279.0" startX="443.3333740234375" startY="-279.0" />
+      <Line endX="443.3333740234375" endY="373.0" layoutX="346.0" layoutY="289.0" startX="443.3333740234375" startY="-289.0" />
+      <Circle fx:id="bigCircleGrey" fill="#d3dbe2" layoutX="790.0" layoutY="100.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="smallCircleGrey" fill="#d3dbe2" layoutX="1008.0" layoutY="521.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="bigCircleRed" fill="#e21001" layoutX="790.0" layoutY="100.0" radius="15.0" stroke="RED" strokeType="INSIDE" />
+      <Circle fx:id="smallCircleRed" fill="#e21001" layoutX="1008.0" layoutY="521.0" radius="7.0" stroke="RED" strokeType="INSIDE" />
+      <Line endX="-22.66668701171875" layoutX="324.0" layoutY="349.0" startX="-100.0" />
+      <Polygon fill="DODGERBLUE" layoutX="389.0" layoutY="360.0" points="-87.66668701171875, -30.5, -87.66668701171875, 8.16668701171875, -62.33331298828125, -9.83331298828125" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
